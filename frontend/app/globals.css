@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #0C1421;
+  --bg-card: #141F30;
+  --bg-card-hover: #19273D;
+  --bg-input: #09101B;
+  --accent-green: #35C987;
+  --accent-green-hover: #2EB377;
+  --text-primary: #F5F7FA;
+  --text-secondary: #9BAABC;
+  --text-muted: #64748B;
+  --border-color: #283548;
+  --border-subtle: #1E293B;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0C1421;
+}
+::-webkit-scrollbar-thumb {
+  background: #283548;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #35C987;
+}
+
+/* Glassmorphism & Cyber Card utilities */
+.cyber-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(53, 201, 135, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.glow-accent {
+  box-shadow: 0 0 25px rgba(53, 201, 135, 0.2);
+}
+
+.glow-danger {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.2);
+}
+
+/* Code syntax highlights */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}

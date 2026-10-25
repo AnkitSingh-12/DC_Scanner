@@ -1,0 +1,30 @@
+# DC Scanner — PDF Intelligence & Cybersecurity Analysis Platform
+> The authoritative PDF forensic verification, structural inspection, and zero-retention analysis platform.
+
+## Overview
+DC Scanner is a specialized PDF intelligence suite designed for security engineers, forensic examiners, and compliance teams. It executes deep binary inspections using a triple-engine parsing architecture (PyMuPDF, pikepdf, pypdf) without running JavaScript or dangerous host shell actions.
+
+## Core Capabilities
+- **Forensic Threat Detection:** Identifies embedded /JavaScript, /Launch actions, malicious /URI obfuscation, CVE-2023-21608 primitives, and embedded PE binaries.
+- **Cryptographic Signature Audit:** Validates PKCS#7 / CMS signature dictionaries, ByteRange coverage, and flags post-signing incremental update tampering.
+- **Font Stream Analysis:** Inspects FontDescriptor, FontBBox, and FontFile3 streams to detect non-embedded fonts and glyph corruption.
+- **Zero-Retention Processing:** Private storage purge clears all uploaded documents and generated report artifacts immediately upon scan completion or user purge command.
+- **AI Document Intelligence:** Contextual Q&A and clause extraction without training external models on proprietary customer documents.
+
+## API Endpoints
+- `POST /api/v1/scans` - Upload PDF document for asynchronous forensic analysis (multipart/form-data).
+- `GET /api/v1/scans/{id}` - Fetch live scan progress, risk level (CLEAN, LOW, MEDIUM, HIGH), and threat indicators.
+- `GET /api/v1/scans/{id}/report` - Retrieve structured JSON forensic dossier or print-ready report.
+- `DELETE /api/v1/scans/{id}` - Permanently purge document and all parsed artifacts.
+- `DELETE /api/v1/scans` - Bulk purge all history and stored files.
+- `GET /api/v1/health` - Diagnostic health check and parser engine version info.
+
+## Documentation
+- Platform URL: https://dcscanner.io
+- API Reference: https://dcscanner.io/developers
+- Changelog: https://dcscanner.io/changelog
+- Tools Directory: https://dcscanner.io/tools
+- Privacy Policy: https://dcscanner.io/privacy
+- Terms of Service: https://dcscanner.io/terms
+- Editorial Policy: https://dcscanner.io/editorial-policy
+
